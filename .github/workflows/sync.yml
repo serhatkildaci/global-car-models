@@ -1,0 +1,50 @@
+name: Sync Data Files
+
+on:
+  push:
+    branches:
+      - main
+    paths:
+      - 'data/models.json'
+      - 'data/models.csv'
+      - 'data/models.yaml'
+
+jobs:
+  sync:
+    runs-on: ubuntu-latest
+    steps:
+    - name: Checkout code
+      uses: actions/checkout@v4
+
+    - name: Get changed file
+      id: changed-file
+      uses: tj-actions/changed-files@v42
+      with:
+        files: |
+          data/models.json
+          data/models.csv
+          data/models.yaml
+
+    - name: Set up Python
+      if: steps.changed-file.outputs.any_changed == 'true'
+      uses: actions/setup-python@v4
+      with:
+        python-version: '3.x'
+
+    - name: Install dependencies
+      if: steps.changed-file.outputs.any_changed == 'true'
+      run: pip install pyyaml
+
+    - name: Sync data files
+      if: steps.changed-file.outputs.any_changed == 'true'
+      run: python scripts/sync_data.py
+      env:
+        # Get the first changed file from the list of changed files
+        TRIGGER_FILE: ${{ fromJson(steps.changed-file.outputs.all_changed_files)[0] }}
+
+    - name: Commit and push changes
+      if: steps.changed-file.outputs.any_changed == 'true'
+      uses: stefanzweifel/git-auto-commit-action@v5
+      with:
+        commit_message: "chore: auto-sync data files"
+        file_pattern: "data/models.json data/models.csv data/models.yaml"
