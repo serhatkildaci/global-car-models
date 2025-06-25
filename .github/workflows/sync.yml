@@ -9,6 +9,9 @@ on:
       - 'data/models.csv'
       - 'data/models.yaml'
 
+permissions:
+  contents: write
+
 jobs:
   sync:
     runs-on: ubuntu-latest
