@@ -1,0 +1,43 @@
+name: Add Vehicle Model
+description: Request to add a new vehicle model or brand
+title: "[ADD] "
+labels: ["enhancement", "data-addition"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thanks for taking the time to contribute to the Global Vehicle Models List!
+  - type: input
+    id: brand
+    attributes:
+      label: Vehicle Brand
+      description: What is the name of the vehicle brand?
+      placeholder: e.g., Toyota, BMW, Tesla
+    validations:
+      required: true
+  - type: input
+    id: model
+    attributes:
+      label: Vehicle Model
+      description: What is the name of the vehicle model?
+      placeholder: e.g., Camry, X5, Model S
+    validations:
+      required: true
+  - type: textarea
+    id: additional-info
+    attributes:
+      label: Additional Information
+      description: Any additional information about the vehicle model (year range, market availability, etc.)
+      placeholder: e.g., Available from 2020-2024, European market only
+    validations:
+      required: false
+  - type: checkboxes
+    id: terms
+    attributes:
+      label: Verification
+      description: Please confirm the following
+      options:
+        - label: I have verified that this vehicle model exists and is/was actually manufactured
+          required: true
+        - label: I have checked that this model is not already in the dataset
+          required: true
