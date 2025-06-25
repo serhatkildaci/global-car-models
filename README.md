@@ -1,8 +1,8 @@
 # Global Vehicle Models List
 
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
-[![GitHub contributors](https://img.shields.io/github/contributors/yourusername/global-car-models.svg)](https://github.com/yourusername/global-car-models/graphs/contributors)
-[![GitHub stars](https://img.shields.io/github/stars/yourusername/global-car-models.svg)](https://github.com/yourusername/global-car-models/stargazers)
+[![GitHub contributors](https://img.shields.io/github/contributors/serhatkildaci/global-car-models.svg)](https://github.com/serhatkildaci/global-car-models/graphs/contributors)
+[![GitHub stars](https://img.shields.io/github/stars/serhatkildaci/global-car-models.svg)](https://github.com/serhatkildaci/global-car-models/stargazers)
 
 This repository contains a comprehensive list of vehicle models, organized by brand. The data is available in three formats: CSV, JSON, and YAML.
 
