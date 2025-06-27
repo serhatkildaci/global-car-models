@@ -1446,7 +1446,9 @@ Ram:
 - ProMaster
 Renault:
 - '4'
+- 4 E-Tech
 - '5'
+- 5 E-Tech
 - '6'
 - '8'
 - '9'
@@ -1463,32 +1465,42 @@ Renault:
 - '21'
 - '25'
 - '30'
+- Alaskan
 - Alpine
 - Arkana
 - Austral
 - Avantime
 - Captur
 - Clio
+- Duster Oroch
 - Espace
 - Express
 - Fluence
 - Fuego
 - Kadjar
 - Kangoo
+- Kardian
+- Kiger
 - Koleos
+- Kwid
 - Laguna
 - Latitude
 - Megane
+- "M\xE9gane E-Tech Electric"
 - Modus
+- Rafale
 - Rodeo
 - Safrane
 - Scenic
+- Scenic E-Tech
 - Spider
 - Symbol
+- Symbioz
 - Taliant
 - Talisman
 - Thalia
 - Trafic
+- Treiber
 - Twingo
 - Vel Satis
 - Wind
